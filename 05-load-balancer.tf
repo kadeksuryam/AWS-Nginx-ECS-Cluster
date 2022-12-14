@@ -1,4 +1,5 @@
 resource "aws_lb" "ecs_alb" {
+  name               = "ecs-alb"
   internal           = false
   load_balancer_type = "application"
   subnets            = aws_subnet.public_ecs_subnet[*].id
